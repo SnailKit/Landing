@@ -1,0 +1,37 @@
+.arrows {
+  position: absolute;
+  top: 15%;
+  left: 40px;
+  width: 20%;
+
+  &__first {
+
+  }
+}
+
+.arrows__first {
+  width: 200px;
+  height: 70px;
+}
+
+.arrows__second {
+  height: 50px;
+}
+
+.arrows__third {
+  width: 120px;
+  height: 70px;
+}
+
+@media screen and (max-width: 1200px) {
+  .arrows {
+    left: 0px;
+    scale: 0.7;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .arrows {
+    display: none;
+  }
+}

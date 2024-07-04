@@ -1,0 +1,90 @@
+@import "public/styles/color";
+
+.protocol {
+  max-width: 1350px;
+  margin: 0 auto;
+  padding: 250px 20px 120px 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  @media (max-width: 1400px) {
+    padding: 120px 0px 120px 20px;
+  }
+
+  @media (max-width: 600px) {
+    padding: 50px 0px 120px 20px;
+  }
+  @media (max-width: 900px) {
+      padding-bottom: 74px;
+  }
+  &__title {
+    text-transform: uppercase;
+    font-family: 'Monument Extended', sans-serif;
+    font-size: 3.8rem;
+    text-align: center;
+    max-width: 1050px;
+
+    @media (max-width: 900px) {
+      max-width: 600px;
+      font-size: 2rem;;
+    }
+  }
+}
+
+.cards__scrollable {
+  display: none;
+}
+
+.cards__desktop {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 56px;
+  width: 100%;
+  margin-top: 100px;
+  justify-items: center;
+
+
+  @media (max-width: 1400px) {
+    display: none;
+  }
+}
+
+.cards__scrollable {
+  @media (max-width: 1400px) {
+    display: flex;
+    margin-top: 40px;
+    gap: 20px;
+    justify-content: center;
+
+    overflow-x: auto;
+    padding: 16px 0 40px 16px;
+    width: 100%;
+
+    .cards__desktop {
+      display: none;
+    }
+
+    &::-webkit-scrollbar {
+      width: 4px;
+      height: 4px
+    }
+
+    &::-webkit-scrollbar-track {
+      background: #f1f1f1;
+      border-radius: 10px;
+    }
+
+    &::-webkit-scrollbar-thumb {
+      background: $grey;
+      border-radius: 10px;
+    }
+
+    &::-webkit-scrollbar-thumb:hover {
+      background: #555;
+    }
+  }
+  @media (max-width: 928px) {
+    justify-content: flex-start;
+  }
+}

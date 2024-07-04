@@ -1,0 +1,121 @@
+@import "public/styles/color";
+
+.header {
+  position: fixed;
+  z-index: 9000;
+  width: 100vw;
+  transition: background-color 0.3s;
+  background: $white;
+  &.scrolled {
+    background: $white;
+  }
+
+  &__content {
+    padding: 35px 130px;
+    display: flex;
+    gap: 75px;
+    align-items: center;
+    @media screen and (max-width: 1100px) {
+      padding: 19px 20px;
+    }
+    @media screen and (max-width: 900px) {
+      justify-content: space-between;
+    }
+  }
+}
+
+.mobile__menu {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 0;
+  margin-top: 72px;
+  height: calc(100vh - 72px);
+  background-color: $white;
+  overflow: hidden;
+  transition: width 0.6s ease;
+}
+
+.mobile__menu__opened {
+  transform: translateX(0);
+  width: 100vw;
+}
+
+
+.burger {
+  display: none;
+  cursor: pointer;
+  &__line {
+    display: block;
+    width: 25px;
+    height: 2px;
+    background-color: $black;
+    margin: 5px;
+    transition: all 0.3s;
+  }
+  &__cross {
+    &:nth-child(1) {
+      transform: rotate(45deg) translate(4px, 6px);
+    }
+    &:nth-child(2) {
+      opacity: 0;
+    }
+    &:nth-child(3) {
+      transform: rotate(-45deg) translate(4px, -6px);
+    }
+  }
+
+  @media (max-width: 900px) {
+    display: block;
+  }
+}
+
+.no__scroll {
+  overflow: hidden;
+}
+
+.desktop {
+  display: block;
+  @media screen and (max-width: 900px){
+    display: none;
+  }
+}
+
+.navigation {
+  display: flex;
+  gap: 48px;
+  @media screen and (max-width: 900px) {
+    display: none;
+  }
+  &__link {
+    color: $black;
+    font-size: 1.8rem;
+    font-style: normal;
+    font-weight: 600;
+    &:hover {
+      text-decoration: underline;
+    }
+    &__active {
+      color: $black;
+    }
+  }
+}
+
+.mobile__items {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 64px;
+  gap: 64px;
+  transition: all 0.3s;
+}
+
+.link {
+  color: $black;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 130%;
+  min-width: 200px;
+  text-align: center;
+}

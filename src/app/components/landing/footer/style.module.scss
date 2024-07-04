@@ -1,0 +1,75 @@
+@import "public/styles/color";
+
+
+.footer {
+  padding-bottom: 200px;
+  @media screen and (max-width: 600px){
+    padding-bottom: 100px;
+  }
+  background: $white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+
+  &__buttons__desktop {
+    margin-bottom: 36px;
+    display: flex;
+    gap: 24px;
+  }
+
+  &__buttons__mobile {
+    display: none;
+  }
+
+  @media screen and (max-width: 810px){
+    &__buttons__desktop {
+      display: none;
+    }
+    &__buttons__mobile {
+      margin-bottom: 40px;
+      gap: 20px;
+      display: flex;
+    }
+  }
+
+
+  &__copyright {
+    color: $grey;
+    font-size: 1.6rem;
+    font-weight: 600;
+    line-height: 24px;
+    padding-bottom: 200px;
+    @media screen and (max-width: 600px){
+      padding-bottom: 100px;
+    }
+  }
+}
+
+.terms {
+  margin-bottom: 28px;
+  display: flex;
+  gap: 48px;
+  font-size: 1.6rem;
+  font-weight: 600;
+  text-decoration: underline;
+  line-height: 24px;
+  @media screen and (max-width: 500px){
+    flex-direction: column;
+    gap: 24px;
+    align-items: center;
+  }
+}
+
+
+.clouds {
+  position: absolute;
+  z-index: 4;
+  bottom: 0;
+  background: url('/images/clouds.png') no-repeat center center/cover;
+  width: 100%;
+  height: 30vh;
+  @media screen and (max-width: 600px){
+    height: 20vh;
+  }
+}

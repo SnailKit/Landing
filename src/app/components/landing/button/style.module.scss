@@ -1,0 +1,96 @@
+@import "public/styles/color";
+
+.button {
+  font-size: 1.8rem;
+  font-weight: 400;
+  color: $white;
+  transition: background-color 0.3s, box-shadow 0.3s, transform 0.1s;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 12px;
+  gap: 12px;
+  &:hover {
+    cursor: pointer;
+  }
+  &-large {
+    padding: 24px;
+    @media screen and (max-width: 600px) {
+      padding: 17.5px;
+      font-size: 1.6rem;
+    }
+  }
+  &-medium {
+    padding: 16px 33px;
+    font-size: 1.8rem;
+    letter-spacing: 1px;
+    font-weight: 600;
+    i {
+      font-size: 1.7rem;
+    }
+  }
+  &-small {
+    padding: 20px 18px;
+    font-size: 1.4rem;
+    letter-spacing: 1px;
+  }
+  &-icon {
+    padding: 16px;
+    font-size: 24px;
+  }
+
+  &:active {
+    transform: scale(0.97);
+    box-shadow: 2px 2px 0px rgba(0, 0, 0, 0.2);
+  }
+
+  &-font-default {
+    font-family: 'Montserrat', sans-serif;
+  }
+
+  &-font-special {
+    font-family: 'Monument Extended', sans-serif;
+  }
+}
+
+.button-primary.button-purple {
+  background: $main;
+  color: $white;
+  border: 3px solid $white;
+  box-shadow: 3px 3px 0px $main;
+}
+
+.button-primary.button-grey {
+  background: $grey;
+  color: $white;
+  border: 3px solid $white;
+  box-shadow: 3px 3px 0px $grey;
+}
+
+.button-primary.button-black {
+  background: $black;
+  color: $white;
+  border: 3px solid $white;
+  box-shadow: 3px 3px 0px $black;
+}
+
+.button-primary.button-red {
+  background: $red;
+  color: $white;
+  border: 3px solid $white;
+  box-shadow: 3px 3px 0px $red;
+}
+
+.button-primary.button-dark-blue {
+  background: $dark-blue;
+  color: $white;
+  border: 3px solid $white;
+  box-shadow: 3px 3px 0px $dark-blue;
+}
+
+.button-primary.button-light-blue {
+  background: $blue;
+  color: $white;
+  border: 3px solid $white;
+  box-shadow: 3px 3px 0px $blue;
+}
